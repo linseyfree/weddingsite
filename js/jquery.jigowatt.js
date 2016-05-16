@@ -13,7 +13,9 @@ jQuery(document).ready(function(){
 
 		$.post(action, {
 			name: $('#name').val(),
-			email: $('#email').val(),
+			//email: $('#email').val(),
+			adultNum: $('#adultNum').val(),
+			childNum: $('#childNum').val(),
 			phone: $('#phone').val(),
 			subject: $('#subject').val(),
 			comments: $('#comments').val(),

@@ -10,7 +10,10 @@ function isEmail($email) {
 if (!defined("PHP_EOL")) define("PHP_EOL", "\r\n");
 
 $name     = $_POST['name'];
-$email    = $_POST['email'];
+$adultNum     = $_POST['adultNum'];
+$childNum     = $_POST['childNum'];
+
+// $email    = $_POST['email'];
 $phone   = $_POST['phone'];
 $subject  = $_POST['subject'];
 $comments = $_POST['comments'];
@@ -18,19 +21,22 @@ $comments = $_POST['comments'];
 if(trim($name) == '') {
 	echo '<div class="error_message">Attention! You must enter your name.</div>';
 	exit();
-} else if(trim($email) == '') {
+} 
+/*else if(trim($email) == '') {
 	echo '<div class="error_message">Attention! Please enter a valid email address.</div>';
 	exit();
-} else if(trim($phone) == '') {
+} */
+else if(trim($phone) == '') {
 	echo '<div class="error_message">Attention! Please enter a valid phone number.</div>';
 	exit();
 } else if(!is_numeric($phone)) {
 	echo '<div class="error_message">Attention! Phone number can only contain digits.</div>';
 	exit();
-} else if(!isEmail($email)) {
+} 
+/*else if(!isEmail($email)) {
 	echo '<div class="error_message">Attention! You have enter an invalid e-mail address, try again.</div>';
 	exit();
-}
+}*/
 
 if(trim($subject) == '') {
 	echo '<div class="error_message">Attention! Please enter a subject.</div>';
@@ -50,7 +56,7 @@ if(get_magic_quotes_gpc()) {
 // Example $address = "joe.doe@yourdomain.com";
 
 //$address = "example@themeforest.net";
-$address = "linseyfree@gmail.com";
+$address = "linsey.free@realart.com";
 
 
 // Configuration option.
@@ -65,11 +71,14 @@ $e_subject = 'You\'ve been contacted by ' . $name . '.';
 // You can change this if you feel that you need to.
 // Developers, you may wish to add more fields to the form, in which case you must be sure to add them here.
 
-$e_body = "You have been contacted by $name with regards to $subject, their additional message is as follows." . PHP_EOL . PHP_EOL;
+$e_body = "You have been contacted by $name." . PHP_EOL . PHP_EOL;
+$e_attending = "Attending? $subject" . PHP_EOL . PHP_EOL;
+$e_adultNum = "How Many Adults? $adultNum" . PHP_EOL . PHP_EOL;
+$e_childNum = "How Many Children? $childNum" . PHP_EOL . PHP_EOL;
 $e_content = "\"$comments\"" . PHP_EOL . PHP_EOL;
-$e_reply = "You can contact $name via email, $email or via phone $phone";
+$e_reply = "Phone Number: $phone";
 
-$msg = wordwrap( $e_body . $e_content . $e_reply, 70 );
+$msg = wordwrap( $e_body . $e_attending . $e_adultNum . $e_childNum . $e_content . $e_reply, 70 );
 
 $headers = "MIME-Version: 1.0" . PHP_EOL;
 $headers .= "Content-type: text/plain; charset=utf-8" . PHP_EOL;
