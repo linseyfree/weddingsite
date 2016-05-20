@@ -9,9 +9,15 @@ $gothamBold: "Gotham A", Verdana, sans-serif !default;
 $lightBrown: #aca39a;
 
 body {
-  background: lightcoral;
   font-family: Georgia,Times,Times New Roman,serif;
   font-weight: lighter;
+}
+
+#woodBg {
+  background: url("../img/med_wood.jpg") repeat;
+  position: fixed;
+  width: 100%;
+  height: 100%;
 }
 
 h1 {
@@ -110,7 +116,7 @@ header {
 
     //background: green;
 
-    height: 45%;
+    height: 55%;
 
     p {
       font-size: 24px;
@@ -127,9 +133,8 @@ header {
     }
 
     #date {
-      background: url("../img/dateShape.svg") no-repeat center center;
+      background: url("../img/dateShape.svg") no-repeat center bottom;
       width: 204px;
-      height: 42px;
       margin: 0 auto;
 
       p {
@@ -188,9 +193,13 @@ header {
 
 #barnImg {
   margin: 0 40px;
-  background: url("../img/barn.jpg")no-repeat;
-  background-size: cover;
+  //background: url("../img/barn2.jpg")no-repeat fixed;
+  //background-size: cover;
+  display: block;
   height: 385px;
+  width: calc(100% - 80px);
+  min-height: 400px;
+  background: transparent;
 }
 
 #rsvpWrap {
