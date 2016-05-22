@@ -96,13 +96,12 @@ $pad: 50px;
 }
 
 header {
-  margin: 40px 40px 0;
+  margin: 15px 15px 0;
+  width: calc(100% - 30px);
   background: #ffffff;
-
   display: table;
   position: absolute;
   height: 100%;
-  width: calc(100% - 80px);
   overflow: hidden;
   box-sizing: border-box;
 
@@ -113,29 +112,27 @@ header {
     left: 0;
     right: 0;
     margin: auto;
-
-    //background: green;
-
-    height: 55%;
+    height: 38%;
 
     p {
-      font-size: 24px;
+      font-size: 15px;
       text-align: center;
       color: $lightBrown;
     }
 
     h1 {
-      font-size: 285px;
+      font-size: 80px;
       text-align: center;
       color: $lightBrown;
       display: block;
-      margin: -24px 0 -83px;
+      margin: 0;
     }
 
     #date {
       background: url("../img/dateShape.svg") no-repeat center bottom;
       width: 204px;
       margin: 0 auto;
+      height: 42px;
 
       p {
         color: #ffffff;
@@ -301,9 +298,13 @@ header {
 
 #handsImg {
   margin: 0 40px;
-  background: url("../img/hands.jpg")no-repeat;
-  background-size: cover;
+  //background: url("../img/hands.jpg")no-repeat;
+  //background-size: cover;
+  display: block;
   height: 385px;
+  width: calc(100% - 80px);
+  min-height: 400px;
+  background: transparent;
 }
 
 #registryWrap {
@@ -324,10 +325,37 @@ header {
   }
 }
 
+/*SCREEN SIZES 960PX*/
+@media only screen and (min-width: 768px) {
+  header {
+    #headerContent {
+      height: 48%;
+      h1 {
+        font-size: 220px;
+      }
+    }
+  }
+}
 
-/*SCREEN SIZES 1025PX*/
+
+/*SCREEN SIZES 960PX*/
 @media only screen and (min-width: 960px) {
   .wrapper {
     width: 960px;
+  }
+  header {
+    margin: 40px 40px 0;
+    width: calc(100% - 80px);
+
+    #headerContent {
+      height: 55%;
+      h1 {
+        font-size: 285px;
+        margin: -24px 0 -83px;
+      }
+      p {
+        font-size: 24px;
+      }
+    }
   }
 }
