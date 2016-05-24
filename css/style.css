@@ -107,14 +107,16 @@ header {
       color: #aca39a;
       display: block;
       margin: 0; }
-    header #headerContent #date {
-      background: url("../img/dateShape.svg") no-repeat center bottom;
-      background-size: 100%;
-      width: 204px;
-      margin: 0 auto;
-      height: 42px; }
-      header #headerContent #date p {
-        color: #ffffff; }
+    header #headerContent #dateWrap {
+      text-align: center; }
+      header #headerContent #dateWrap #date {
+        background: url("../img/dateShape.svg") no-repeat center bottom;
+        background-size: 100%;
+        padding: 0 39px;
+        display: inline-block;
+        margin: 0 auto; }
+        header #headerContent #dateWrap #date p {
+          color: #ffffff; }
 
 #contentWrap {
   position: relative;
@@ -152,13 +154,23 @@ header {
     padding: 30px 0 5px; }
   #barnWrap p {
     color: #aca39a; }
+  #barnWrap a {
+    font-size: 15px;
+    color: #e6baaf;
+    text-decoration: none;
+    font-style: italic; }
+  #barnWrap p.intro {
+    padding: 0 50px 0 0; }
+  #barnWrap p span {
+    font-size: 15px;
+    font-style: italic; }
 
 #barnImg {
   display: none; }
 
 #barnImgMobile {
   display: block;
-  background: url("../img/barn2.jpg") no-repeat center center;
+  background: url("../img/barn3.jpg") no-repeat center center;
   background-size: cover;
   height: 400px;
   margin: 0 15px;
@@ -292,7 +304,7 @@ header {
   padding: 50px 0; }
   #registryWrap h1 {
     text-align: center;
-    color: #aca39a;
+    color: #ffffff;
     padding: 0 0 30px;
     font-size: 75px; }
   #registryWrap img {
@@ -304,9 +316,12 @@ header {
 /*SCREEN SIZES 960PX*/
 @media only screen and (min-width: 768px) {
   header #headerContent {
-    height: 48%; }
+    height: 56%; }
     header #headerContent h1 {
-      font-size: 220px; } }
+      font-size: 170px;
+      margin: -20px 0 -50px; }
+    header #headerContent #dateWrap #date {
+      padding: 0 39px; } }
 /*SCREEN SIZES 960PX*/
 @media only screen and (min-width: 960px) {
   body {
@@ -344,8 +359,8 @@ header {
         margin: -24px 0 -83px; }
       header #headerContent p {
         font-size: 24px; }
-      header #headerContent #date {
-        height: auto; }
+      header #headerContent #dateWrap #date {
+        padding: 0 50px; }
     header #topLeftFlower {
       display: block;
       position: absolute;
@@ -427,8 +442,7 @@ header {
     margin: 0 40px;
     padding: 100px 0 0; }
     #registryWrap h1 {
-      font-size: 120px;
-      color: #ffffff; }
+      font-size: 120px; }
     #registryWrap img {
       margin: 0 auto; }
     #registryWrap #bottomCenterFlower {
