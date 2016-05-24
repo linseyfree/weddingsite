@@ -8,7 +8,7 @@ jQuery(document).ready(function(){
 		$('#message').hide();
 
  		$('#submit')
-			.after('<img src="assets/ajax-loader.gif" class="loader" />')
+			.after('<img src="../img/spin.gif" class="loader" />')
 			.attr('disabled','disabled');
 
 		$.post(action, {

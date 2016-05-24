@@ -38,13 +38,15 @@ else if(trim($phone) == '') {
 	exit();
 }*/
 
-if(trim($subject) == '') {
-	echo '<div class="error_message">Attention! Please enter a subject.</div>';
+else if(trim($subject) == '') {
+	echo '<div class="error_message">Attention! Please enter whether or not you are attending.</div>';
 	exit();
-} else if(trim($comments) == '') {
+} 
+
+/*else if(trim($comments) == '') {
 	echo '<div class="error_message">Attention! Please enter your message.</div>';
 	exit();
-}
+}*/
 
 if(get_magic_quotes_gpc()) {
 	$comments = stripslashes($comments);
@@ -93,8 +95,8 @@ if(mail($address, $e_subject, $msg, $headers)) {
 
 	echo "<fieldset>";
 	echo "<div id='success_page'>";
-	echo "<h1>Email Sent Successfully.</h1>";
-	echo "<p>Thank you <strong>$name</strong>, your message has been submitted to us.</p>";
+	echo "<h1>Email Sent Successfully</h1>";
+	echo "<p>Thank you <strong>$name</strong>, for your RSVP!</p>";
 	echo "</div>";
 	echo "</fieldset>";
 

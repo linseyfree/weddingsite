@@ -25,6 +25,18 @@
         <div id="woodBg"></div>
 
         <header>
+            <div id="topLeftFlower">
+                <img src="img/topLeftFlower.png">
+            </div>
+            <div id="topRightFlower">
+                <img src="img/topRightFlower.png">
+            </div>
+            <div id="topLeftBottomFlower">
+                <img src="img/topLeftBottomFlower.png">
+            </div>
+            <div id="topRightBottomFlower">
+                <img src="img/topRightBottomFlower.png">
+            </div>
            <div class="wrapper">
                <div id="headerContent">
                    <p>We're so excited to finally</p>
@@ -58,6 +70,8 @@
                         <h2>Address</h2>
                         <p>
                             28544 Kingston Pike
+                        </p>
+                        <p>
                             Circleville Ohio 43113
                         </p>
                     </div>
@@ -73,6 +87,7 @@
         </section>
 
         <section id="barnImg" class="parallax-window" data-parallax="scroll" data-image-src="img/barn2.jpg" data-z-index="100" data-bleed="50"></section>
+        <section id="barnImgMobile"></section>
 
         <section id="rsvpWrap">
             <div class="grid grid-pad">
@@ -90,14 +105,14 @@
                                 <div class="col-1-2">
                                     <div class="formInput">
                                         <label for="name" accesskey="U"><span class="required">*</span> Name:</label>
-                                        <input name="name" type="text" id="name" size="30" value="" />
+                                        <input name="name" type="text" id="name"  value="" />
                                     </div>
                                 </div>
 
                                 <div class="col-1-2">
                                     <div class="formInput">
                                         <label for="phone" accesskey="P"><span class="required">*</span> Phone Number:</label>
-                                        <input name="phone" type="text" id="phone" size="28" value="" />
+                                        <input name="phone" type="text" id="phone"  value="" />
                                     </div>
                                 </div>
                             </div>
@@ -119,8 +134,8 @@
                                         <label for="subject"><span class="required">*</span> Attending?</label>
                                         <select name="subject" id="subject">
                                             <option value="" disabled selected> </option>
-                                            <option value="Yes">Yes</option>
-                                            <option value="No">No</option>
+                                            <option value="Yes">Cant wait to celebrate with you!</option>
+                                            <option value="No">Sorry, cant make it. drink one on me!</option>
                                         </select>
                                     </div>
                                 </div>
@@ -129,7 +144,7 @@
                                 <div class="col-1-2">
                                     <div class="formInput">
                                         <label for="adultNum">How Many Adults?</label>
-                                        <input name="adultNum" type="text" id="adultNum" size="24" value="" />
+                                        <input name="adultNum" type="text" id="adultNum"  value="" />
                                     </div>
                                 </div>
 
@@ -140,20 +155,20 @@
                                 <div class="col-1-2">
                                     <div class="formInput">
                                         <label for="childNum">How Many Children?</label>
-                                        <input name="childNum" type="text" id="childNum" size="23" value="" />
+                                        <input name="childNum" type="text" id="childNum"  value="" />
                                     </div>
                                 </div>
 
                                 <div class="col-1-2">
                                     <div class="formInput">
                                         <label for="comments" accesskey="C">Request a song:</label>
-                                        <input name="comments" type="text" id="comments" size="23" value="" />
+                                        <input name="comments" type="text" id="comments"  value="" />
                                     </div>
                                 </div>
                             </div>
 
                             <div class="col-1-1">
-                                <input type="submit" class="submit" id="submit" value="Submit" />
+                                <input type="submit" class="submitBtn" id="submit" value="Submit" />
                             </div>
 
                         </fieldset>
@@ -165,7 +180,8 @@
             </div>
         </section>
 
-        <section id="handsImg" class="parallax-window" data-parallax="scroll" data-image-src="img/hands.jpg" data-z-index="100" data-bleed="50"></section>
+        <!--<section id="handsImg" class="parallax-window" data-parallax="scroll" data-image-src="img/hands.jpg" data-z-index="100" data-bleed="50"></section>-->
+        <!--<section id="handsImgMobile"></section>-->
 
         <section id="registryWrap">
             <div class="grid grid-pad">
@@ -174,7 +190,9 @@
                         <h1>Registry</h1>
                     </div>
                     <div class="col-1-3">
-                        <img src="img/kohlsLogo.svg"/>
+                        <a target="_blank" href="http://www.kohls.com/upgrade/gift_registry/kohlsgrw_home.jsp?section=list&listid=3184729&viewtype=listview&isfromsearch=true&regtype=registry.wedding,registry.baby,registry.splday&regno=3184729">
+                            <img src="img/kohlsLogo.svg"/>
+                        </a>
                     </div>
                     <div class="col-1-3">
                         <img src="img/elderLogo.svg"/>
@@ -183,6 +201,9 @@
                         <img src="img/walmartLogo.svg"/>
                     </div>
                 </div>
+            </div>
+            <div id="bottomCenterFlower">
+                <img src="img/bottomCenterFlower.png">
             </div>
         </section>
 

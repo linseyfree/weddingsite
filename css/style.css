@@ -3,13 +3,11 @@
 /* COLORS */
 body {
   font-family: Georgia,Times,Times New Roman,serif;
-  font-weight: lighter; }
+  font-weight: lighter;
+  background: url("../img/med_wood.jpg") repeat; }
 
 #woodBg {
-  background: url("../img/med_wood.jpg") repeat;
-  position: fixed;
-  width: 100%;
-  height: 100%; }
+  display: none; }
 
 h1 {
   margin: 0;
@@ -53,13 +51,13 @@ input {
   width: 100%; }
 
 .col-1-2 {
-  width: 50%; }
+  width: 100%; }
 
 .col-1-3 {
-  width: 33.33%; }
+  width: 100%; }
 
 .col-1-4 {
-  width: 25%; }
+  width: 100%; }
 
 .col-1-8 {
   width: 12.5%; }
@@ -71,18 +69,26 @@ input {
   width: 75%; }
 
 .wrapper {
-  width: 100%;
-  margin: 0 auto; }
+  margin: 0 20px;
+  width: calc(100% - 40px); }
 
 header {
   margin: 15px 15px 0;
   width: calc(100% - 30px);
   background: #ffffff;
   display: table;
-  position: absolute;
-  height: 100%;
+  position: relative;
+  height: 400px;
   overflow: hidden;
   box-sizing: border-box; }
+  header #topLeftFlower {
+    display: none; }
+  header #topRightFlower {
+    display: none; }
+  header #topLeftBottomFlower {
+    display: none; }
+  header #topRightBottomFlower {
+    display: none; }
   header #headerContent {
     position: absolute;
     top: 0;
@@ -103,6 +109,7 @@ header {
       margin: 0; }
     header #headerContent #date {
       background: url("../img/dateShape.svg") no-repeat center bottom;
+      background-size: 100%;
       width: 204px;
       margin: 0 auto;
       height: 42px; }
@@ -110,62 +117,66 @@ header {
         color: #ffffff; }
 
 #contentWrap {
-  position: absolute;
+  position: relative;
   bottom: 0;
   background: blue;
   height: 0;
   width: 100%; }
 
 #quoteWrap {
-  margin: 0 40px;
-  padding: 100px 0;
+  margin: 0 15px;
+  padding: 50px 0;
   background: #c1b9b0; }
   #quoteWrap p {
-    font-size: 23px;
+    font-size: 18px;
     color: #ffffff;
     letter-spacing: .05em;
     text-align: center;
-    padding: 0 60px;
+    padding: 0;
     font-style: italic;
     line-height: 2.1em; }
   #quoteWrap p:last-of-type {
     margin: 40px 0 0; }
 
 #barnWrap {
-  margin: 0 40px;
+  margin: 0 15px;
   background: #ffffff;
-  padding: 100px 0; }
+  padding: 50px 0; }
   #barnWrap h1 {
     text-align: center;
     color: #aca39a;
-    font-size: 120px;
-    padding: 0 0 30px; }
+    font-size: 75px;
+    padding: 0 0 30px;
+    line-height: 1em; }
   #barnWrap h2 {
-    padding: 0 0 16px; }
+    padding: 30px 0 5px; }
   #barnWrap p {
     color: #aca39a; }
 
 #barnImg {
-  margin: 0 40px;
+  display: none; }
+
+#barnImgMobile {
   display: block;
-  height: 385px;
-  width: calc(100% - 80px);
-  min-height: 400px;
-  background: transparent; }
+  background: url("../img/barn2.jpg") no-repeat center center;
+  background-size: cover;
+  height: 400px;
+  margin: 0 15px;
+  width: calc(100% - 30px); }
 
 #rsvpWrap {
-  margin: 0 40px;
+  margin: 0 15px;
   background: #ffffff;
-  padding: 100px 0; }
+  padding: 50px 0; }
   #rsvpWrap h1 {
     text-align: center;
     color: #aca39a;
-    font-size: 120px;
+    font-size: 75px;
     padding: 0 0 30px; }
   #rsvpWrap .col-1-2:first-of-type .formInput {
-    margin-right: 20px; }
+    margin-right: 0; }
   #rsvpWrap .col-1-2:last-of-type .formInput {
-    margin-left: 20px; }
+    margin-left: 0; }
   #rsvpWrap .formInput {
     border-bottom: 1px solid #d5d1cc;
     margin: 10px 0;
@@ -175,9 +186,11 @@ header {
       font-size: 18px;
       line-height: 2em;
       letter-spacing: .05em;
-      color: #817467;
-      padding: 0 0 0 15px;
-      box-sizing: border-box; }
+      color: #aca39a;
+      padding: 0;
+      box-sizing: border-box;
+      background: transparent;
+      width: 100%; }
     #rsvpWrap .formInput input:focus {
       outline: 0; }
     #rsvpWrap .formInput label {
@@ -190,13 +203,13 @@ header {
       color: #aca39a;
       font-weight: bold; }
     #rsvpWrap .formInput select {
-      padding: 0 0 0 15px;
+      padding: 0;
       font-size: 18px;
       line-height: 2em;
       letter-spacing: .05em;
-      color: #817467;
+      color: #aca39a;
       box-sizing: border-box;
-      width: 72%;
+      width: 100%;
       border: none;
       border-radius: 0;
       height: 36px;
@@ -208,7 +221,7 @@ header {
       background: transparent url(../img/dropdownArrow.svg) no-repeat right center; }
     #rsvpWrap .formInput select:focus {
       outline: 0; }
-  #rsvpWrap .submit {
+  #rsvpWrap .submitBtn {
     background: #f7cdc2;
     color: #ffffff;
     font-family: "Gotham SSm A", Verdana, sans-serif;
@@ -216,32 +229,77 @@ header {
     font-size: 14px;
     letter-spacing: .09em;
     font-weight: bold;
-    padding: 10px 30px;
+    padding: 10px 40px;
     border-radius: 5px;
     display: block;
     text-align: center;
-    margin: 60px auto 0; }
+    margin: 60px auto 0;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    transition: 0.5s ease; }
+  #rsvpWrap .submitBtn:hover {
+    background: #a0bda7; }
+
+#contactform {
+  position: relative; }
+
+.loader {
+  bottom: -72px;
+  display: block;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0; }
+
+.error_message {
+  font-family: "Gotham SSm A", Verdana, sans-serif;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: .05em;
+  font-weight: bold;
+  color: #f7cdc2; }
+
+#success_page h1 {
+  font-family: "Gotham SSm A", Verdana, sans-serif;
+  text-transform: uppercase;
+  font-size: 14px !important;
+  letter-spacing: .05em;
+  font-weight: bold;
+  color: #aca39a;
+  padding: 0 0 16px; }
+#success_page p {
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  line-height: 2em;
+  color: #aca39a;
+  text-align: center; }
 
 #handsImg {
-  margin: 0 40px;
+  display: none; }
+
+#handsImgMobile {
   display: block;
-  height: 385px;
-  width: calc(100% - 80px);
-  min-height: 400px;
-  background: transparent; }
+  background: url("../img/hands.jpg") no-repeat center center;
+  background-size: cover;
+  height: 400px;
+  margin: 0 15px;
+  width: calc(100% - 30px); }
 
 #registryWrap {
-  margin: 0 40px 40px;
-  background: #ffffff;
-  padding: 100px 0; }
+  margin: 0 15px 15px;
+  background: transparent;
+  padding: 50px 0; }
   #registryWrap h1 {
     text-align: center;
     color: #aca39a;
-    font-size: 120px;
-    padding: 0 0 30px; }
+    padding: 0 0 30px;
+    font-size: 75px; }
   #registryWrap img {
     display: block;
-    margin: 0 auto; }
+    margin: 20px auto; }
+  #registryWrap #bottomCenterFlower {
+    display: none; }
 
 /*SCREEN SIZES 960PX*/
 @media only screen and (min-width: 768px) {
@@ -251,10 +309,32 @@ header {
       font-size: 220px; } }
 /*SCREEN SIZES 960PX*/
 @media only screen and (min-width: 960px) {
+  body {
+    background: none; }
+
+  .col-1-2 {
+    width: 50%; }
+
+  .col-1-3 {
+    width: 33.33%; }
+
+  .col-1-4 {
+    width: 25%; }
+
   .wrapper {
-    width: 960px; }
+    max-width: 960px;
+    margin: 0 auto; }
+
+  #woodBg {
+    display: block;
+    background: url("../img/med_wood.jpg") repeat;
+    position: fixed;
+    width: 100%;
+    height: 100%; }
 
   header {
+    position: absolute;
+    height: 100%;
     margin: 40px 40px 0;
     width: calc(100% - 80px); }
     header #headerContent {
@@ -263,6 +343,96 @@ header {
         font-size: 285px;
         margin: -24px 0 -83px; }
       header #headerContent p {
-        font-size: 24px; } }
+        font-size: 24px; }
+      header #headerContent #date {
+        height: auto; }
+    header #topLeftFlower {
+      display: block;
+      position: absolute;
+      left: 0; }
+    header #topRightFlower {
+      display: block;
+      position: absolute;
+      right: 0; }
+    header #topLeftBottomFlower {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0; }
+    header #topRightBottomFlower {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0; }
+
+  #contentWrap {
+    position: absolute; }
+
+  #quoteWrap {
+    padding: 100px 0;
+    margin: 0 40px; }
+    #quoteWrap p {
+      font-size: 23px;
+      padding: 0 60px; }
+
+  #barnWrap {
+    padding: 100px 0 150px;
+    margin: 0 40px; }
+    #barnWrap h1 {
+      font-size: 120px; }
+    #barnWrap h2 {
+      padding: 0 0 16px; }
+
+  #barnImg {
+    display: block;
+    height: 400px;
+    min-height: 400px;
+    background: transparent;
+    margin: 0 40px;
+    width: calc(100% - 80px); }
+
+  #barnImgMobile {
+    display: none; }
+
+  #rsvpWrap {
+    padding: 100px 0;
+    margin: 0 40px; }
+    #rsvpWrap h1 {
+      font-size: 120px; }
+    #rsvpWrap .col-1-2:first-of-type .formInput {
+      margin-right: 20px; }
+    #rsvpWrap .col-1-2:last-of-type .formInput {
+      margin-left: 20px; }
+    #rsvpWrap .formInput input {
+      padding: 0 0 0 15px;
+      width: auto; }
+    #rsvpWrap .formInput input#name {
+      width: 80%; }
+    #rsvpWrap .formInput select {
+      padding: 0 0 0 15px;
+      width: 72%; }
+
+  #handsImg {
+    display: block;
+    height: 385px;
+    min-height: 400px;
+    background: transparent;
+    margin: 0 40px;
+    width: calc(100% - 80px); }
+
+  #handsImgMobile {
+    display: none; }
+
+  #registryWrap {
+    margin: 0 40px;
+    padding: 100px 0 0; }
+    #registryWrap h1 {
+      font-size: 120px;
+      color: #ffffff; }
+    #registryWrap img {
+      margin: 0 auto; }
+    #registryWrap #bottomCenterFlower {
+      display: block;
+      margin: 100px 0 0; } }
 
 /*# sourceMappingURL=style.css.map */
